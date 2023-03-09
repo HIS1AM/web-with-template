@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hisham</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <img src="wallpaper.jpg">
+    <header>
+      <h2 class="logo">logo</h2>
+      <nav class="navigation">
+        <a href="Home.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="icon_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="dropdown">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </div>
+    </header>
+    <script>
+      const iconBtn = document.querySelector('.icon_btn');
+      const iconBtnIcon = document.querySelector('.icon_btn i');
+      const dropDown = document.querySelector('.dropdown');
+
+      iconBtn.onclick = function () {
+         dropDown.classList.toggle('open')
+         const isOpen = dropDown.classList.contains('open')
+
+         iconBtnIcon.classList = isOpen
+         ? 'fa-solid fa-xmark'
+         : 'fa-solid fa-bars'
+      };
+    </script>
+ </body>
+</html>
