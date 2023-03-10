@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(wallpaper.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.Image {
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.Artikkels .Ai-Artikkel{
+ padding: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+
+footer {
+	color: #fff;
+    padding-right: 0;
+    padding-left: 0;
+    padding: 22px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+	text-align: center;
+    margin-top: auto;
+}
+
+.Logo {
+    text-decoration: none;
+}
+
+.Logo h2 {
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+
+
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+.icon_btn {
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown.open {
+ height: 100px;
+}
+
+.dropdown li {
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: white;
+}
+
+@media(max-width: 850px){
+    .navigation{
+        display: none;
+    }
+
+    .icon_btn {
+        display: block;
+    }
+    .dropdown {
+        display: block;
+    }
+}
+
+@media(max-width: 500px){
+    .dropdown {
+        left: 2rem;
+        width: unset;
+    }
+}
